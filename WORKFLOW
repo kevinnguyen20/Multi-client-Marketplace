@@ -23,3 +23,8 @@ integration, but rebasing makes for a cleaner history. If
 you examine the log of a rebased branch, it looks like a 
 linear history: it appears that all the work happened in 
 series, even when it originally happened in parallel.
+
+You can remove the test branch because all 
+the work is integrated and you don’t need them anymore.
+
+$ git branch -d test-branch
