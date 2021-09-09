@@ -55,7 +55,7 @@ application dependencies, use your command-line tool, and navigate to your
 application folder, and then issue the following command:
 
 ```
-$npm install
+$ npm install
 ```
 
 NPM will then install the Express module because it is currently the only
