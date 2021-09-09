@@ -1,3 +1,5 @@
+# Workflow
+
 You check out the experiment branch, and then rebase it 
 onto the master branch as follows:
 
@@ -28,3 +30,10 @@ You can remove the test branch because all
 the work is integrated and you don’t need them anymore.
 
 $ git branch -d test-branch
+
+directly installing modules isn't really scalable. Think about it for a second:
+you're going to use many Node modules in your application, transfer it between
+working environments, and probably share it with other developers. So, installing
+the project modules this way will soon become a dreadful task. Instead, you should
+start using the package.json file that organizes your project metadata and helps
+you manage your application dependencies.
