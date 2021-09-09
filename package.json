@@ -1,0 +1,22 @@
+{
+  "name": "multi-client_marketplace",
+  "version": "1.0.0",
+  "description": "Here merchants are our primary customers. Merchants are able to sign up at the site and create a page for themselves that display a list of their services and the pricing.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinnguyen20/Multi-client_Marketplace.git"
+  },
+  "keywords": [
+    "Marketplace"
+  ],
+  "author": "Kevin Nguyen, Georgi Kotsev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinnguyen20/Multi-client_Marketplace/issues"
+  },
+  "homepage": "https://github.com/kevinnguyen20/Multi-client_Marketplace#readme"
+}
