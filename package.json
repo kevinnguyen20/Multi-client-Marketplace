@@ -17,10 +17,10 @@
   "license": "MIT",
   "dependencies": {
     "express": "latest",
-    "mongoose": "latest",
     "morgan": "latest",
     "compression": "latest",
     "method-override": "latest",
+    "express-session": "latest",
     "ejs": "latest"
   },
   "bugs": {
