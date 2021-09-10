@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home Page</title>
+        <title>Login Page</title>
     </head>
     <style>
-    table, th, td {
-        border: 1px solid black;
-        text-align: center;
-    }
-    div{
-        border: 4px dotted red;
-        width: 30%;
-        font-family: 'Comic Sans MS';
-        font-size: large;
-        margin-top: 200px;
-        margin-left: 600px;
-    }
     h1{
         text-align: center;
     }
+    .madeby {
+        margin-top: 30%;
+        margin-left: 80%;
+    }
+    #SignInTable{
+        align-self: center;
+        margin-left: 40%;
+        margin-top: -8.5%;
+    }
+    #BtnSignIn{
+        margin-left: 40%;
+    }
     </style>
     <body>
-        <h1>Clothes for naughty boys</h1>
-        <table style="width: 100%;">
-            <tr>
-                <th>T-Shirts</th>
-                <th>Dresses</th>
-                <th>Rocks</th>
-                <th>Dildos</th>
-            </tr>
-            <tr>
-                <td>15 EUR</td>
-                <td>20 EUR</td>
-                <td>25 EUR</td>
-                <td>50 EUR</td>
-            </tr>
+        <h1>E-Shop Kevin & Georgi</h1>
+        <table id="RegisterTable">
+            <tr><td>Username:<td><input name="username" type="text" size="20" maxlength="20" required autofocus></input></tr>
+            <tr><td>First name:<td><input name="firstname" type="text" size="20" maxlength="20" required autofocus></tr>
+            <tr><td>Last name:<td><input name="lastname" type="text" size="20" maxlength="20" required autofocus></tr>
+            <tr><td>Password:<td><input name="password" type="password" size="20" maxlength="20" required autofocus></tr>
         </table>
-        <div>
-            <ul>
-                <li>Paying only in cash</li>
-                <li>Everything is OURS because of communism</li>
-                <li>Don't forget to make your beloved ones happy</li>
-                <li>We support LGBTQ+ only in June</li>
-            </ul>
-        </div>
+
+        <button type="button" onclick="alert('Successfully signed up')">Register</button>
+
+        <table id="SignInTable">
+            <tr><td>Username:<td><input name="username" type="text" size="20" maxlength="20" required autofocus></input></tr>
+            <tr><td>Password:<td><input name="password" type="password" size="20" maxlength="20" required autofocus></tr>
+        </table>
+        <button id="BtnSignIn" type="button" onclick="alert('Successfully signed in')">Sign in</button>
+        <div class="madeby">&copy; Marketplace 2021 <br> Made by Kevin Nguyen and Georgi Kotsev</div>
     </body>
 </html>
