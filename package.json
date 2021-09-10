@@ -17,7 +17,11 @@
   "license": "MIT",
   "dependencies": {
     "express": "latest",
-    "mongoose":"latest"
+    "mongoose": "latest",
+    "morgan": "latest",
+    "compression": "latest",
+    "body-parser": "latest",
+    "method-override": "latest"
   },
   "bugs": {
     "url": "https://github.com/kevinnguyen20/Multi-client_Marketplace/issues"
