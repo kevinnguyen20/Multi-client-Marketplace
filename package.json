@@ -20,7 +20,6 @@
     "mongoose": "latest",
     "morgan": "latest",
     "compression": "latest",
-    "body-parser": "latest",
     "method-override": "latest"
   },
   "bugs": {
