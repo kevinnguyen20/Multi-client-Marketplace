@@ -20,7 +20,8 @@
     "mongoose": "latest",
     "morgan": "latest",
     "compression": "latest",
-    "method-override": "latest"
+    "method-override": "latest",
+    "ejs": "latest"
   },
   "bugs": {
     "url": "https://github.com/kevinnguyen20/Multi-client_Marketplace/issues"
