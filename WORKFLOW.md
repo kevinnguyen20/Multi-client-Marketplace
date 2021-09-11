@@ -19,5 +19,30 @@ application folder, and then issue the following command:
 $ npm install
 ```
 
-NPM will then install the Express module because it is currently the only
-dependency defined in your package.json file.
+## Using mongosh
+
+### Basics
+
+- ```> use <db-name>```: switch database
+
+- ```> show dbs```: list all database with documents
+
+- ```> show collections```: list all collections within the database
+
+- ```> db.<collection-name>.insert()```: insert a document
+
+- ```> db.<collection-name>.find()```: list all documents
+
+- ```> db.<collection-name>.drop()```: delete collection
+
+- ```> db.<collection-name>.update(...,...,{upsert: true})```: update an existing document, creating new document if required
+
+- ```> db.<collection-name>.save()```: creating new document if not existing, updating document if ```_id``` exists
+
+### Query operators
+
+- ```> db.<collection-name>.find({"property1": { $in: ["value1", "value2"]}})```
+
+- ```> db.<collection-name>.find({ "property1": "value1", "property2": { $gt: value } })```
+
+- ```> db.<collection-name>.find( { $or: [{ "property1": "value1" }, {"property2": "value2"}] })```
