@@ -2,7 +2,8 @@ var config = require('./config'),
     express = require('express'),
     morgan = require('morgan'),
     compress = require('compression'),
-    methodOverride = require('method-override');
+    methodOverride = require('method-override'),
+    session = require('express-session');
 
 module.exports = function() {
     var app = express();
