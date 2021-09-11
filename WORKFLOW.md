@@ -37,7 +37,13 @@ $ npm install
 
 - ```> db.<collection-name>.update(...,...,{upsert: true})```: update an existing document, creating new document if required
 
+- ```> db.<collection-name>.update(...,...,{multi: true})```: update all the documents that comply with the selection criteria
+
 - ```> db.<collection-name>.save()```: creating new document if not existing, updating document if ```_id``` exists
+
+- ```> db.<collection-name>.remove()```: remove all documents (won't delete the collection or its indexes)
+
+- ```db.<collection-name>.remove({ "property1": "value1" }, true)```: remove only one document
 
 ### Query operators
 
