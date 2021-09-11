@@ -21,6 +21,16 @@ $ npm install
 
 ## Using mongosh
 
+### Connecting to MongoDB
+
+To connect to MongoDB, you will need to use the MongoDB connection URI. The
+MongoDB connection URI is a string URL that tells the MongoDB drivers how to
+connect to the database instance. The MongoDB URI is usually constructed as follows:
+
+```
+mongodb://username:password@hostname:port/database
+```
+
 ### Basics
 
 - ```> use <db-name>```: switch database
