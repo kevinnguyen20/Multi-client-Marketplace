@@ -31,7 +31,8 @@ module.exports = function() {
 
     require('../app/routes/index.server.routes.js')(app);
 
-    app.use(express.static('./public'));
+    var publicDir = require('path').join(__dirname,'/public');
+    app.use(express.static(publicDir));
 
     return app;
 }
