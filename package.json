@@ -21,7 +21,8 @@
     "compression": "latest",
     "method-override": "latest",
     "express-session": "latest",
-    "ejs": "latest"
+    "ejs": "latest",
+    "mongoose": "latest"
   },
   "bugs": {
     "url": "https://github.com/kevinnguyen20/Multi-client_Marketplace/issues"
