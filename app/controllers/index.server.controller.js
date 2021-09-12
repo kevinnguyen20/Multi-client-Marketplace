@@ -6,6 +6,6 @@ exports.render = function(req, res) {
     req.session.lastVisit = new Date();
 
     res.render('index', {
-        title: 'The best pranksters'
+        title: 'The best prank stars'
     });
 };

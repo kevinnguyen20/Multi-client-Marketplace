@@ -4,6 +4,9 @@
         <title>Login Page</title>
     </head>
     <style>
+    body{
+        background-color: rgb(180, 199, 98);
+    }
     h1{
         text-align: center;
     }
@@ -20,10 +23,26 @@
         margin-left: 80%;
         margin-top: -8%;
     }
+    #RegBtn:hover{
+        transform: scale(0.85);
+    }
+    #RegBtn{
+        width: 10em; 
+    }
+    #BtnSignIn:hover{
+        transform: scale(0.85);
+    }
+    #BtnSignIn{
+        width: 10em;
+    }
     </style>
     <body>
-        <h1><%= title %></h1>
-        <h1>E-Shop Kevin & Georgi</h1>
+        <marquee direction="right" behaviour="alternate" hspace="35%" scrollamount="8">
+            <h1><%= title %></h1>
+        </marquee>
+        <marquee direction="left" behaviour="alternate" hspace="35%" scrollamount="8">
+            <h1>E-Shop Kevin & Georgi</h1>
+        </marquee>
         <div id="Register">
             <table>
                 <tr><td>Username:<td><input name="username" type="text" size="20" maxlength="20" required autofocus></input></tr>
@@ -32,7 +51,7 @@
                 <tr><td>Password:<td><input name="password" type="password" size="20" maxlength="20" required autofocus></tr>
             </table>
         
-            <button type="button" onclick="alert('Successfully signed up')">Register</button>
+            <button id="RegBtn" type="button" onclick="alert('Successfully signed up')">Register</button>
         </div>
         <div id="LogoDiv">
             <img src="img/logo.png" alt="Logo">
@@ -46,5 +65,16 @@
             <button id="BtnSignIn" type="button" onclick="alert('Successfully signed in')">Sign in</button>
         </div>
         <div class="madeby">&copy; Marketplace 2021 <br> Made by Kevin Nguyen and Georgi Kotsev</div>
+        <script>
+            document.getElementById("RegBtn").addEventListener("click", myFunction);
+            function myFunction() {
+                document.getElementById("RegBtn").style.backgroundColor = "red";
+            }
+
+            document.getElementById("BtnSignIn").addEventListener("click", yourFunction);
+            function yourFunction() {
+                document.getElementById("BtnSignIn").style.backgroundColor = "green";
+            }
+        </script>
     </body>
 </html>
