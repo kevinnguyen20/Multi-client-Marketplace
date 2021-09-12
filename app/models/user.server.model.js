@@ -61,6 +61,10 @@ var ProductSchema = new Schema({
     seller: {
         type: Schema.ObjectId,
         ref: 'User'
+    },
+    price: {
+        type: Number,
+        required: true
     }
 });
 
@@ -75,3 +79,4 @@ UserSchema.virtual('fullName').get(function() {
 UserSchema.set('toJSON', { getters: true, virtuals: true });
 
 mongoose.model('User', UserSchema);
+mongoose.model('Product', ProductSchema);
