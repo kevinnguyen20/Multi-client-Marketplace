@@ -4,15 +4,32 @@ var mongoose = require('mongoose'),
 var UserSchema = new Schema({
     firstName: String,
     lastName: String,
-    email: String,
+    email: {
+        type: String,
+        index: true,
+        unique: true,
+        required: true,
+        match: /.+\@.+\..+/
+    },
     username: {
         type: String,
-        trim: true
+        trim: true,
+        unique: true,
+        required: true
     },
-    password: String,
+    password: {
+        type: String,
+        required: true,
+        validate: [
+            function(password) {
+                return password.length >= 6;
+            },
+            'Password should be longer than 5 chars'
+        ]
+    },
     created: {
         type: Date,
-        default: Date.now
+        default: Date.now,
     },
     website: {
         type: String,
@@ -27,6 +44,23 @@ var UserSchema = new Schema({
                 return url;
             }
         }
+    }
+});
+
+var ProductSchema = new Schema({
+    name: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    description: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    seller: {
+        type: Schema.ObjectId,
+        ref: 'User'
     }
 });
 
