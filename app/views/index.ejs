@@ -22,6 +22,7 @@
     #SignIn{
         margin-left: 80%;
         margin-top: -8%;
+        font-size: larger;
     }
     #RegBtn:hover{
         transform: scale(0.85);
@@ -35,6 +36,9 @@
     #BtnSignIn{
         width: 10em;
     }
+    #Register{
+        font-size: larger;
+    }
     </style>
     <body>
         <marquee direction="right" behaviour="alternate" hspace="35%" scrollamount="8">
@@ -46,34 +50,47 @@
         <div id="Register">
             <table>
                 <tr><td>Username:<td><input name="username" type="text" size="20" maxlength="20" required autofocus></input></tr>
-                <tr><td>First name:<td><input name="firstname" type="text" size="20" maxlength="20" required autofocus></tr>
-                <tr><td>Last name:<td><input name="lastname" type="text" size="20" maxlength="20" required autofocus></tr>
-                <tr><td>Password:<td><input name="password" type="password" size="20" maxlength="20" required autofocus></tr>
+                <tr><td>First name:<td><input name="firstname" type="text" size="20" maxlength="20" required autofocus></input></tr>
+                <tr><td>Last name:<td><input name="lastname" type="text" size="20" maxlength="20" required autofocus></input></tr>
+                <tr><td>Password:<td><input name="password" type="password" size="20" maxlength="20" required autofocus></input></tr>
             </table>
         
             <button id="RegBtn" type="button" onclick="alert('Successfully signed up')">Register</button>
         </div>
         <div id="LogoDiv">
-            <img src="img/logo.png" alt="Logo">
+            <img src="img/logo.png" alt="Logo" width="250px" height="250px">
         </div>
         <div id="SignIn">
             <table>
                 <tr><td>Username:<td><input name="username" type="text" size="20" maxlength="20" required autofocus></input></tr>
-                <tr><td>Password:<td><input name="password" type="password" size="20" maxlength="20" required autofocus></tr>
+                <tr><td>Password:<td><input name="password" type="password" size="20" maxlength="20" required autofocus></input></tr>
             </table>
 
             <button id="BtnSignIn" type="button" onclick="alert('Successfully signed in')">Sign in</button>
         </div>
         <div class="madeby">&copy; Marketplace 2021 <br> Made by Kevin Nguyen and Georgi Kotsev</div>
         <script>
-            document.getElementById("RegBtn").addEventListener("click", myFunction);
+            document.getElementById("RegBtn").addEventListener("click", myFunction); 
             function myFunction() {
-                document.getElementById("RegBtn").style.backgroundColor = "red";
+                bgReg = document.getElementById("RegBtn").style.backgroundColor;
+                if(bgReg != "red"){
+                    document.getElementById("RegBtn").style.backgroundColor = "red";
+                }
+                else{
+                    document.getElementById("RegBtn").style.backgroundColor = "white";
+                }
+                
             }
 
-            document.getElementById("BtnSignIn").addEventListener("click", yourFunction);
+            document.getElementById("BtnSignIn").addEventListener("click", yourFunction); 
             function yourFunction() {
-                document.getElementById("BtnSignIn").style.backgroundColor = "green";
+                bgSign = document.getElementById("BtnSignIn").style.backgroundColor;
+                if(bgSign != "green"){
+                    document.getElementById("BtnSignIn").style.backgroundColor = "green";
+                }
+                else{
+                    document.getElementById("BtnSignIn").style.backgroundColor = "white";
+                }
             }
         </script>
     </body>
