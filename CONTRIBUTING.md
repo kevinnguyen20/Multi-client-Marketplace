@@ -2,6 +2,14 @@
 
 ## Rebasing - Basics
 
+### Rebase local branch onto remote branch
+
+```
+git pull --rebase origin master
+```
+
+### Rebase local branches
+
 You check out the experiment branch, and then rebase it
 onto the master branch as follows:
 
