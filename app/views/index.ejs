@@ -2,54 +2,8 @@
 <html>
     <head>
         <title>Login Page</title>
+        <link rel="stylesheet" href="indexStyle.css" media="screen">
     </head>
-    <style>
-    body{
-        background-color: rgb(180, 199, 98);
-    }
-    h1{
-        text-align: center;
-    }
-    .madeby {
-        margin-top: 30%;
-        margin-left: 80%;
-    }
-    #LogoDiv{
-        margin-left: 35%;
-        width: fit-content;
-        float: left;
-    }
-    #SignIn{
-        margin-left: 80%;
-        margin-top: -8%;
-        font-size: larger;
-    }
-    #RegBtn:hover{
-        transform: scale(0.85);
-    }
-    #RegBtn{
-        width: 10em; 
-    }
-    #BtnSignIn:hover{
-        transform: scale(0.85);
-    }
-    #BtnSignIn{
-        width: 10em;
-    }
-    #Register{
-        font-size: larger;
-    }
-    body{
-        animation: change 10s infinite;
-    }
-    @keyframes change{
-        0%{background-color: #1abc9c;}
-        25%{background-color: #2ecc71;}
-        50%{background-color: #3498db;}
-        75%{background-color: #9b59b6;}
-        100%{background-color: #e74c3c;}
-    }
-    </style>
     <body>
         <marquee direction="right" behaviour="alternate" hspace="35%" scrollamount="8">
             <h1><%= title %></h1>
@@ -68,7 +22,7 @@
             <button id="RegBtn" type="button" onclick="alert('Successfully signed up')">Register</button>
         </div>
         <div id="LogoDiv">
-            <img src="img/logo.png" alt="Logo" width="250px" height="250px">
+            <img src="img/logo.jpg" alt="Logo" width="400px" height="400px">
         </div>
         <div id="SignIn">
             <table>
@@ -78,30 +32,7 @@
 
             <button id="BtnSignIn" type="button" onclick="alert('Successfully signed in')">Sign in</button>
         </div>
-        <div class="madeby">&copy; Marketplace 2021 <br> Made by Kevin Nguyen and Georgi Kotsev</div>
-        <script>
-            document.getElementById("RegBtn").addEventListener("click", myFunction); 
-            function myFunction() {
-                bgReg = document.getElementById("RegBtn").style.backgroundColor;
-                if(bgReg != "red"){
-                    document.getElementById("RegBtn").style.backgroundColor = "red";
-                }
-                else{
-                    document.getElementById("RegBtn").style.backgroundColor = "white";
-                }
-                
-            }
-
-            document.getElementById("BtnSignIn").addEventListener("click", yourFunction); 
-            function yourFunction() {
-                bgSign = document.getElementById("BtnSignIn").style.backgroundColor;
-                if(bgSign != "green"){
-                    document.getElementById("BtnSignIn").style.backgroundColor = "green";
-                }
-                else{
-                    document.getElementById("BtnSignIn").style.backgroundColor = "white";
-                }
-            }
-        </script>
+        <div class="madeby">K &amp; G Commerce &copy;<br> Made by Kevin Nguyen and Georgi Kotsev</div>
+        <script src="indexPage.js"></script>
     </body>
 </html>

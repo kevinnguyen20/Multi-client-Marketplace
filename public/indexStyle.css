@@ -1,0 +1,43 @@
+h1{
+    text-align: center;
+}
+.madeby {
+    margin-top: 30%;
+    margin-left: 80%;
+}
+#LogoDiv{
+    margin-left: 35%;
+    width: fit-content;
+    float: left;
+}
+#SignIn{
+    margin-left: 80%;
+    margin-top: -8%;
+    font-size: larger;
+}
+#RegBtn:hover{
+    transform: scale(0.85);
+}
+#RegBtn{
+    width: 10em; 
+}
+#BtnSignIn:hover{
+    transform: scale(0.85);
+}
+#BtnSignIn{
+    width: 10em;
+}
+#Register{
+    font-size: larger;
+}
+body{
+    background-color: rgb(180, 199, 98);
+    animation: change 10s infinite;
+}
+@keyframes change{
+    0%{background-color: #1abc9c;}
+    25%{background-color: #2ecc71;}
+    50%{background-color: #3498db;}
+    75%{background-color: #9b59b6;}
+    100%{background-color: #e74c3c;}
+}
