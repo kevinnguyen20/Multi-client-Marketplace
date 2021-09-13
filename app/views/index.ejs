@@ -39,6 +39,16 @@
     #Register{
         font-size: larger;
     }
+    body{
+        animation: change 10s infinite;
+    }
+    @keyframes change{
+        0%{background-color: #1abc9c;}
+        25%{background-color: #2ecc71;}
+        50%{background-color: #3498db;}
+        75%{background-color: #9b59b6;}
+        100%{background-color: #e74c3c;}
+    }
     </style>
     <body>
         <marquee direction="right" behaviour="alternate" hspace="35%" scrollamount="8">
