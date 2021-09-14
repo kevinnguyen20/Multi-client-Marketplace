@@ -5,6 +5,7 @@ var getErrorMessage = function(err) {
     var message = '';
 
     if(err.code) {
+        console.log(err.code);
         switch(err.code) {
             case 11000:
             case 11001:
@@ -35,10 +36,23 @@ exports.renderSignin = function(req, res, next) {
 
 exports.renderSignup = function(req, res, next) {
     if(!req.user) {
+        res.render('signup', {
+            title: 'Sign-up Form',
+            messages: req.flash('error')
+        });
+    } else {
+        return res.redirect('/');
+    }
+};
+
+exports.signup = function(req, res, next) {
+    if(!req.user) {
         var user = new User(req.body);
         var message = null;
 
         user.provider = 'local';
+
+        console.log(user);
 
         user.save(function(err) {
             if(err) {
@@ -62,7 +76,7 @@ exports.signout = function(req, res) {
     res.redirect('/');
 };
 
-exports.create = function(req, res, next) {
+/*exports.create = function(req, res, next) {
     var user = new User(req.body);
 
     user.save(function(err) {
@@ -72,7 +86,7 @@ exports.create = function(req, res, next) {
             res.json(user);
         }
     });
-};
+};*/
 
 exports.list = function(req, res, next) {
     User.find({}, function(err, users) {

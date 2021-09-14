@@ -3,19 +3,10 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-    firstName: {
-        type: String,
-        required: 'First name is required'
-    },
-    lastName: {
-        type: String,
-        required: 'Last name is required'
-    },
+    firstName: String,
+    lastName: String,
     email: {
         type: String,
-        index: true,
-        unique: true,
-        required: 'E-mail address is required',
         match: [/.+\@.+\..+/, "Please fill a valid e-mail address"]
     },
     username: {
@@ -26,10 +17,9 @@ var UserSchema = new Schema({
     },
     password: {
         type: String,
-        required: 'Password is required',
         validate: [
             function(password) {
-                return password.length > 5;
+                return password && password.length > 5;
             },
             'Password should be longer than 5 chars'
         ]
@@ -46,47 +36,48 @@ var UserSchema = new Schema({
     created: {
         type: Date,
         default: Date.now,
-    },
-    website: {
-        type: String,
-        set: function(url) {
-            if(!url) {
-                return url;
-            } else {
-                if(url.indexOf('http://') !== 0 && url.indexOf('https://') !== 0) {
-                    url = 'http://' + url;
-                }
+    }//,
+    // website: {
+    //     type: String,
+    //     set: function(url) {
+    //         if(!url) {
+    //             return url;
+    //         } else {
+    //             if(url.indexOf('http://') !== 0 && url.indexOf('https://') !== 0) {
+    //                 url = 'http://' + url;
+    //             }
 
-                return url;
-            }
-        }
-    }
+    //             return url;
+    //         }
+    //     },
+    //     default: ''
+    // }
 });
 
-var ProductSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    description: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    seller: {
-        type: Schema.ObjectId,
-        ref: 'User'
-    },
-    price: {
-        type: Number,
-        required: true
-    }
-});
+// var ProductSchema = new Schema({
+//     name: {
+//         type: String,
+//         required: true,
+//         trim: true
+//     },
+//     description: {
+//         type: String,
+//         required: true,
+//         trim: true
+//     },
+//     seller: {
+//         type: Schema.ObjectId,
+//         ref: 'User'
+//     },
+//     price: {
+//         type: Number,
+//         required: true
+//     }
+// });
 
-UserSchema.virtual('fullName').get(function() {
+/*UserSchema.virtual('fullName').get(function() {
     return this.firstName + ' ' + this.lastName;
-})/*.set(function(fullName) {
+}).set(function(fullName) {
     var splitName = fullName.split(' ');
     this.firstName = splitName[0] || '';
     this.lastName = splitName[1] || '';
@@ -137,4 +128,4 @@ UserSchema.set('toJSON', {
 });
 
 mongoose.model('User', UserSchema);
-mongoose.model('Product', ProductSchema);
+// mongoose.model('Product', ProductSchema);
