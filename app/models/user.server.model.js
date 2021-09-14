@@ -35,7 +35,7 @@ var UserSchema = new Schema({
     providerData: {},
     created: {
         type: Date,
-        default: Date.now,
+        default: Date.now
     }//,
     // website: {
     //     type: String,
