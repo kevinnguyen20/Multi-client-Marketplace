@@ -1,0 +1,41 @@
+body{
+    animation: change 10s infinite;
+}
+@keyframes change{
+    0%{background-color: #1abc9c;}
+    25%{background-color: #2ecc71;}
+    50%{background-color: #3498db;}
+    75%{background-color: #9b59b6;}
+    100%{background-color: #e74c3c;}
+}
+#SignInForm{
+    margin-left: 30%;
+    margin-top: 25%;
+    font-size: 3em;
+    width: fit-content;
+}
+.formClass input{
+    font-size: 1ch
+}
+#buttonSubmit{
+    font-size: 80%;
+    margin-left: 40%;
+}
+#buttonSubmit:hover{
+    transform: scale(0.85);
+}
+h1{
+    margin-left: 30%;
+    font-family: Comic Sans MS;
+}
+h1{
+    animation: prank 5s 1;
+    color: brown;
+}
+@keyframes prank{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(-105deg);}
+    50%{transform: rotate(-75deg);}
+    75%{transform: rotate(-95deg);}
+    100%{transform: rotate(-90deg);}
+}

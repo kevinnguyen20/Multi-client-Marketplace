@@ -15,14 +15,17 @@
             <h2>Hello <%=userFullName%></h2>
             <a href="/signout">Sign out</a>
         <% } else { %>
-            <a href="/signup">Signup</a>
-            <a href="/signin">Signin</a>
+            <div id="regDiv">Don't have an account?<br> Click here to register:<br>
+                <button id="Register" onclick="window.location='/signup';">Sign up</button>
+            </div>
+            <div id="signInDiv">Already a registered user?<br> Sign in and enjoy!<br>
+                <button id="SignIn" onclick="window.location='/signin';">Sign in</button>
+            </div>
         <% } %>
 
         <div id="LogoDiv">
-            <img src="img/logo.jpg" alt="Logo" width="400px" height="400px">
+            <img src="img/logo.jpg" alt="Logo" width="350px" height="350px">
         </div>
         <div class="madeby">K &amp; G Commerce &copy;<br> Made by Kevin Nguyen and Georgi Kotsev</div>
-        <script src="indexPage.js"></script>
     </body>
 </html>

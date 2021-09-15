@@ -11,27 +11,28 @@ h1{
     float: left;
 }
 #SignIn{
+    font-size: 1em;
+    width: 9em;
+}
+#SignIn:hover{
+    transform: scale(0.85);
+}
+#signInDiv{
+    margin-top: -3.5%;
     margin-left: 80%;
-    margin-top: -8%;
     font-size: larger;
 }
-#RegBtn:hover{
-    transform: scale(0.85);
-}
-#RegBtn{
-    width: 10em; 
-}
-#BtnSignIn:hover{
-    transform: scale(0.85);
-}
-#BtnSignIn{
-    width: 10em;
-}
 #Register{
+    font-size: 1em;
+    width: 9em;
+}
+#Register:hover{
+    transform: scale(0.85);
+}
+#regDiv{
     font-size: larger;
 }
 body{
-    background-color: rgb(180, 199, 98);
     animation: change 10s infinite;
 }
 @keyframes change{
