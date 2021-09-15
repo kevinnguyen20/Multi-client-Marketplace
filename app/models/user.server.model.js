@@ -26,12 +26,12 @@ var UserSchema = new Schema({
     salt: {
         type: Buffer
     },
-    // provider: {
-    //     type: String,
-    //     required: 'Provider is required'
-    // },
-    // providerId: String,
-    // providerData: {},
+    provider: {
+        type: String,
+        required: 'Provider is required'
+    },
+    providerId: String,
+    providerData: {},
     created: {
         type: Date,
         default: Date.now
@@ -47,14 +47,6 @@ UserSchema.pre('save', function(next) {
     next();
 });
 
-// UserSchema.post('save', function(next) {
-//     if(this.isNew) {
-//         console.log('A new user was created.');
-//     } else {
-//         console.log('A user updated is details.');
-//     }
-// });
-
 UserSchema.methods.hashPassword = function(password) {
     return crypto.pbkdf2Sync(password, this.salt, 10000, 64, 'sha512').toString('base64');
 };
@@ -63,24 +55,24 @@ UserSchema.methods.authenticate = function(password) {
     return this.password === this.hashPassword(password);
 };
 
-// UserSchema.statics.findUniqueUsername = function(username, suffix, callback) {
-//     var _this = this;
-//     var possibleUsername = username + (suffix || '');
+UserSchema.statics.findUniqueUsername = function(username, suffix, callback) {
+    var _this = this;
+    var possibleUsername = username + (suffix || '');
 
-//     _this.findOne({
-//         username: possibleUsername
-//     }, function(err, user) {
-//         if(!err) {
-//             if(!user) {
-//                 callback(possibleUsername);
-//             } else {
-//                 return _this.findUniqueUsername(username, (suffix || 0) +
-//                     1, callback);
-//             }
-//         } else {
-//             callback(null);
-//         }
-//     });
-// };
+    _this.findOne({
+        username: possibleUsername
+    }, function(err, user) {
+        if(!err) {
+            if(!user) {
+                callback(possibleUsername);
+            } else {
+                return _this.findUniqueUsername(username, (suffix || 0) +
+                    1, callback);
+            }
+        } else {
+            callback(null);
+        }
+    });
+};
 
 mongoose.model('User', UserSchema);

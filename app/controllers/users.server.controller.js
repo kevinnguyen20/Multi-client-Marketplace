@@ -48,7 +48,6 @@ exports.renderSignup = function(req, res, next) {
 exports.signup = function(req, res, next) {
     if(!req.user) {
         var user = new User(req.body);
-        var message = null;
 
         user.provider = 'local';
 
