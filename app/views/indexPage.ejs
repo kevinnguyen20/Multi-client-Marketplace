@@ -2,7 +2,8 @@
 <html>
     <head>
         <title><%= title %></title>
-        <link rel="stylesheet" href="indexStyle.css" media="screen">
+        <script src="js/indexPage.js"></script>
+        <link rel="stylesheet" href="css/indexStyle.css" media="screen">
     </head>
     <body>
         <marquee direction="right" behaviour="alternate" hspace="35%" scrollamount="8">
@@ -15,12 +16,9 @@
             <h2>Hello <%=userFullName%></h2>
             <a href="/signout">Sign out</a>
         <% } else { %>
-            <div id="regDiv">Don't have an account?<br> Click here to register:<br>
-                <button id="Register" onclick="window.location='/signup';">Sign up</button>
-            </div>
-            <div id="signInDiv">Already a registered user?<br> Sign in and enjoy!<br>
-                <button id="SignIn" onclick="window.location='/signin';">Sign in</button>
-            </div>
+            <a href="/signup">Signup</a>
+            <a href="/signin">Signin</a>
+            <a href="/signout">Signout</a>
         <% } %>
 
         <div id="LogoDiv">
