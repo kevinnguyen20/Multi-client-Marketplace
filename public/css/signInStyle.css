@@ -10,7 +10,7 @@ body{
 }
 #SignInForm{
     margin-left: 30%;
-    margin-top: 25%;
+    margin-top: 15%;
     font-size: 3em;
     width: fit-content;
 }
@@ -20,6 +20,9 @@ body{
 #buttonSubmit{
     font-size: 80%;
     margin-left: 40%;
+    width: 8em;
+    background-color: cyan;
+    border-radius: 10px;
 }
 #buttonSubmit:hover{
     transform: scale(0.85);

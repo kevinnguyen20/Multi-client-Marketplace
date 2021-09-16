@@ -1,0 +1,37 @@
+body{
+    animation: change 10s infinite;
+}
+@keyframes change{
+    0%{background-color: #1abc9c;}
+    25%{background-color: #2ecc71;}
+    50%{background-color: #3498db;}
+    75%{background-color: #9b59b6;}
+    100%{background-color: #e74c3c;}
+}
+.formClass input{
+    font-size: 1ch
+}
+#signUpForm{
+    margin-left: 30%;
+    margin-top: 5%;
+    font-size: 2em;
+    width: fit-content;
+}
+#buttonSubmit{
+    font-size: 80%;
+    width: 8em;
+    background-color:chocolate;
+    color: white;
+    border-radius: 10px;
+}
+#buttonSubmit:hover{
+    transform: scale(0.85);
+}
+h1{
+    margin-left: 30%;
+    font-family: Comic Sans MS;
+}
+h1{
+    animation: prank 5s 1;
+    color: white;
+}

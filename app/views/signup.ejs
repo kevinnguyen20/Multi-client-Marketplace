@@ -4,12 +4,16 @@
         <title>
             <%=title %>
         </title>
+        <link rel="stylesheet" href="css/signUpStyle.css" media="screen">
     </head>
     <body>
         <% for(var i in messages) { %>
             <div class="flash"><%= messages[i] %></div>
         <% } %>
-        <form action="/signup" method="post">
+        <marquee behavior="alternate" direction="up" height="200px">
+            <h1>We are happy to have you as a customer!<br> Your adventure starts here!</h1>
+        </marquee>
+        <form id="signUpForm" class="formClass" action="/signup" method="post">
             <div>
                 <label>First Name:</label>
                 <input type="text" name="firstName" />
@@ -31,7 +35,7 @@
                 <input type="password" name="password" />
             </div>
             <div>
-                <input type="submit" value="Sign up" />
+                <input id="buttonSubmit" onclick="alert('Your account was successfully registered!')" type="submit" value="Sign up" />
             </div>
         </form>
         <!-- <a href="/oauth/facebook">Sign in with Facebook</a> -->
