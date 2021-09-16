@@ -34,6 +34,11 @@ h1{
 }
 body{
     animation: change 10s infinite;
+    background-image: url('../img/beachy_cliff_sussex.jpg');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-attachment: fixed;
+
 }
 @keyframes change{
     0%{background-color: #1abc9c;}
