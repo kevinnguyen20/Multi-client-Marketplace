@@ -75,4 +75,13 @@ UserSchema.statics.findUniqueUsername = function(username, suffix, callback) {
     });
 };
 
+UserSchema.virtual('fullName').get(function() {
+    return this.firstName + ' ' + this.lastName;
+});
+
+UserSchema.set('toJSON', {
+    getters: true,
+    virtuals: true
+})
+
 mongoose.model('User', UserSchema);
